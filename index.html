@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SkillBee — Learn. Build. Grow.</title>
+  <meta name="description" content="SkillBee — a hive for creators, learners and early startups. Courses, mentors, projects and gigs." />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="manifest" href="manifest.json" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- CDN libraries (fast & easy) -->
+  <script defer src="js/vendor.js"></script>
+  <script defer src="js/threeScene.js"></script>
+  <script defer src="js/scroll.js"></script>
+  <script defer src="js/form.js"></script>
+  <!-- SEO / Social -->
+  <meta property="og:title" content="SkillBee — Learn. Build. Grow.">
+  <meta property="og:description" content="Join SkillBee — a hive of learners, mentors and builders">
+  <meta property="og:image" content="images/hero-large.webp">
+  <meta name="theme-color" content="#000000">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <nav class="nav">
+    <div class="nav-left">
+      <a href="/" class="logo" aria-label="SkillBee home">🐝 SkillBee</a>
+    </div>
+    <ul class="nav-right">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+    <!-- HERO -->
+    <header id="hero" class="hero">
+      <div id="three-root" class="three-root" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <h1 class="hero-title">SkillBee — Build what matters</h1>
+        <p class="hero-sub">Join a hive of doers: learn hands-on, ship projects, and get opportunities.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#how">Get Started</a>
+          <a class="btn ghost" href="blog.html">Read the Blog</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="images/hero-large.webp" alt="SkillBee hive illustration" />
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>What is SkillBee?</h2>
+        <p class="lead">SkillBee brings learners, mentors and micro-startups together — a place to learn with projects, get mentorship and find gigs.</p>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS (3 columns) -->
+    <section id="how" class="section alt">
+      <div class="container grid-3">
+        <article>
+          <h3>Learn</h3>
+          <p>Short, project-based courses with mentor reviews and code reviews.</p>
+        </article>
+        <article>
+          <h3>Collaborate</h3>
+          <p>Join micro-teams to build real products and portfolios.</p>
+        </article>
+        <article>
+          <h3>Earn</h3>
+          <p>Apply to gigs and internships that value project experience.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section id="benefits" class="section">
+      <div class="container">
+        <h2>Who benefits?</h2>
+        <div class="benefits-list">
+          <div class="benefit">Students — build portfolios</div>
+          <div class="benefit">Freelancers — get projects</div>
+          <div class="benefit">Startups — hire skilled builders</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="section alt">
+      <div class="container">
+        <h2>Our team</h2>
+        <div class="team-cards">
+          <div class="card">
+            <img src="images/team.png" alt="Team member 1" loading="lazy">
+            <h4>Team Member 1</h4>
+            <p>Product</p>
+          </div>
+          <div class="card">
+            <img src="images/team.png" alt="Team member 2" loading="lazy">
+            <h4>Team Member 2</h4>
+            <p>Engineering</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDERS -->
+    <section id="founders" class="section">
+      <div class="container founders">
+        <div class="founder-card">
+          <img src="images/founder.png" alt="Founder" loading="lazy">
+          <h3>Founder</h3>
+          <p>Vision & product</p>
+        </div>
+        <div class="founder-card">
+          <img src="images/cofounder.png" alt="Co-founder" loading="lazy">
+          <h3>Co-founder</h3>
+          <p>Strategy & growth</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEEDBACK -->
+    <section id="feedback" class="section alt">
+      <div class="container">
+        <h2>Share Feedback</h2>
+        <form id="feedbackForm" class="form">
+          <div class="form-grid">
+            <input name="name" aria-label="Name" placeholder="Name" required>
+            <input name="email" type="email" aria-label="Email" placeholder="Email" required>
+            <input name="contact" type="tel" aria-label="Contact number" placeholder="Contact number" required>
+          </div>
+          <textarea name="feedback" aria-label="Feedback" placeholder="Your feedback" rows="5" required></textarea>
+          <button type="submit" class="btn primary">Submit Feedback</button>
+          <div id="formMessage" aria-live="polite" class="form-message"></div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> SkillBee • Built with care</p>
+      </div>
+    </footer>
+  </main>
+
+</body>
+</html>
