@@ -1,0 +1,121 @@
+:root{
+  --bg:#000;
+  --card:#0f0f10;
+  --muted:#bfc3c7;
+  --accent:#ffcc00;
+  --white:#ffffff;
+  --max-width:1200px;
+  --glass: rgba(255,255,255,0.04);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background:var(--bg);
+  color:var(--white);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+a{color:inherit}
+.container{
+  width:90%;
+  max-width:var(--max-width);
+  margin:0 auto;
+}
+
+/* NAV */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 0;
+  position:fixed;
+  width:100%;
+  z-index:200;
+  background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.15));
+  backdrop-filter: blur(6px);
+}
+.logo{font-weight:700; font-size:1.1rem; text-decoration:none}
+.nav-right{display:flex; list-style:none; gap:20px; margin:0}
+.nav-right a{padding:8px 12px; border-radius:8px; text-decoration:none; color:var(--muted)}
+.nav-right a:hover{background:var(--glass); color:var(--white)}
+
+/* SKIP LINK */
+.skip{
+  position:absolute;
+  left:-999px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+.skip:focus{left:8px; top:8px; width:auto; height:auto; padding:6px 10px; background:#000; color:#fff; z-index:300}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 420px;
+  align-items:center;
+  gap:28px;
+  padding-top:80px;
+}
+.hero-inner{padding:40px 0}
+.hero-title{font-size:clamp(2rem,6vw,3.6rem); margin:0 0 10px}
+.hero-sub{color:var(--muted); margin-bottom:18px; max-width:650px}
+.hero-cta{display:flex; gap:12px}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:10px 16px; border-radius:12px; border:0; cursor:pointer; text-decoration:none; font-weight:600;
+}
+.btn.primary{background:linear-gradient(90deg,var(--accent), #f2b500); color:#000}
+.btn.ghost{background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--white)}
+
+/* HERO IMAGE (right) */
+.hero-image{display:flex; align-items:center; justify-content:center}
+.hero-image img{max-width:100%; border-radius:18px; box-shadow:0 20px 60px rgba(0,0,0,0.6); width:420px; height:auto; object-fit:cover}
+
+/* SECTION */
+.section{padding:80px 0}
+.section.alt{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent)}
+.grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+.lead{color:var(--muted); max-width:900px; margin:8px auto 0}
+
+/* Benefits */
+.benefits-list{display:flex; gap:18px; justify-content:center; margin-top:18px}
+.benefit{background:var(--card); padding:18px; border-radius:12px; min-width:180px; text-align:center}
+
+/* Team & cards */
+.team-cards{display:flex; gap:20px; justify-content:center; flex-wrap:wrap}
+.card{background:var(--card); padding:18px; border-radius:14px; width:220px; text-align:center}
+.card img{width:100%; height:140px; object-fit:cover; border-radius:10px}
+
+/* founders */
+.founders{display:flex; gap:18px; justify-content:center; flex-wrap:wrap}
+.founder-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px; border-radius:16px; width:260px; text-align:center}
+.founder-card img{width:120px; height:120px; border-radius:999px; object-fit:cover}
+
+/* FORM */
+.form{max-width:800px; margin:0 auto}
+.form-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:12px}
+.form input, .form textarea{
+  width:100%; padding:12px; background:transparent; border:1px solid rgba(255,255,255,0.06); border-radius:10px; color:var(--white)
+}
+.form-message{margin-top:12px; color:var(--muted)}
+
+/* footer */
+.footer{padding:40px 0; border-top:1px solid rgba(255,255,255,0.03)}
+.footer p{color:var(--muted); text-align:center}
+
+/* RESPONSIVE */
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr; padding-top:100px}
+  .hero-image{order:-1; margin-bottom:10px}
+  .grid-3{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+}
